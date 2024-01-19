@@ -1,0 +1,266 @@
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(36, 100%, 99%);
+}
+
+.wrapper{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+.bar-menu {
+    min-height: 60px;
+}
+
+.bar-menu ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 70px);
+    left: 0;
+    top: 70px;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    background-color: white;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.bar-menu ul li {
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+}
+
+.bar-menu ul li a {
+    padding: 25px;
+}
+
+.bar-menu.active ul{
+    overflow: visible;
+    max-height : 125px;
+}
+
+.bar-line{
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.home, .new, .popular, .trending, .categories{
+    margin: 5px;
+}
+
+.categories{
+    margin-right: 0;
+}
+
+.background-desktop{
+    display: none;
+}
+
+h2{
+    font-size: xx-large;
+    margin-top: 5%;
+    font-weight: 800;
+    line-height: 110%;
+    margin-bottom: 4%;
+}
+
+.ubahnih{
+    font-size: 85%;
+    line-height: 150%;
+    margin-bottom: 4%;
+}
+
+button{
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    border: 0;
+    padding: 3% 8% 3% 8%;
+    letter-spacing: 6px;
+    font-weight: 600;
+
+}
+
+.right{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    padding: 5%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+h3{
+    color: hsl(35, 77%, 62%);
+    font-size: xx-large;
+}
+
+.ques{
+    font-weight: bolder;
+    margin-top: 7%;
+}
+
+.describe{
+    font-size: small;
+    color: hsl(233, 8%, 79%);
+    margin-bottom: 5%;
+}
+
+.elemen1, .elemen2, .elemen3{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 5%;
+}
+
+.section{
+    margin-left: 4%;
+}
+
+#judul{
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 3%;
+}
+
+#desc{
+    font-size: smaller;
+    margin: 0
+}
+
+h4{
+    font-size: x-large;
+    color: hsl(233, 8%, 79%);
+    margin-bottom: 1%;
+    margin-top: 0;
+}
+
+.elemen3{
+    margin-bottom: 10%;
+}
+
+@media only screen and (min-width: 450px){
+    .wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .container{
+        padding: 3%;
+        padding-top: 1%;
+    }
+    .background-mobile{
+        display: none;
+    }
+    .background-desktop{
+        display: contents;
+    }
+    .bar-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bar-menu ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        position: relative;
+        height: 100vh;
+        width: auto;
+        top: 0;
+        overflow: visible;
+        padding: 0;
+    }
+
+    .home, .new, .popular, .trending, .categories{
+        margin: 30px;
+        cursor: pointer;
+    }
+    .home:hover, .new:hover, .popular:hover, .trending:hover, .categories:hover {
+        color: yellow;
+        transition: .5s ease-in;
+    }
+
+    .categories{
+        margin-right: 0;
+    }
+    .bar-line{
+        display: none;
+    }
+    .body{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+    }
+    .left-top{
+        width: 60%;
+    }
+    .right{
+        width: 40%;
+        height: 20%;
+        margin: 0;
+        margin-left: 15px;
+        padding: 3%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tulisan{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 5% !important;
+        gap: 10px;
+    }
+    .ubahnih{
+        width: 100%;
+        margin: 0;
+        font-size: large;
+    }
+    h2{
+        width: 200%;
+        margin: 0;
+        font-size: 3em;
+    }
+    button{
+        margin-top: 10%;
+    }
+
+    .left-bottom{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        justify-content: space-between;
+        width: 102%;
+    }
+
+    #desc{
+        width: 90%;
+    }
+
+    .elemen1, .elemen2, .elemen3{
+        margin-right: 20px;
+        width: 90%;
+    }
+    .elemen3{
+        margin-right: 0;
+    }
+}
